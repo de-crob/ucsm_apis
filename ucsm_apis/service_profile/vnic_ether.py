@@ -28,6 +28,7 @@ def vnic_ether_create(handle, name, ls_server_dn, adaptor_profile_name=None,
 		ident_pool_name (string):
 		mtu (string):
 		nw_ctrl_policy_name (string):
+		nw_templ_name(string):
 		order (string):
 		pin_to_group_name (string):
 		qos_policy_name (string):

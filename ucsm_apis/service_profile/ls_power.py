@@ -11,7 +11,13 @@ def ls_power_create(handle, ls_server_dn, state=None, **kwargs):
 	Args:
 		handle (UcsHandle)
 		ls_server_dn (string):
-		state (string):
+		state (string): 'admin-down' or 'admin-up' or 'bmc-reset-immediate' or 
+						'bmc-reset-wait' or 'cmos-reset-immediate' or 
+						'cycle-immediate' or 'cycle-wait' or 
+						'diagnostic-interrupt' or 'down' or 
+						'hard-reset-immediate' or 'hard-reset-wait' or 
+						'ipmi-reset' or 'kvm-reset' or 'soft-shut-down' or 
+						'soft-shut-down-only' or 'up'
 		**kwargs:
 		
 	Returns:
