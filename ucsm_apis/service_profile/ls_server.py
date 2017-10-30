@@ -7,15 +7,15 @@ from ucsmsdk.ucsexception import UcsOperationError
 
 def ls_server_create(handle, name, org_dn="org-root", agent_policy_name=None,
 					 bios_profile_name=None, boot_policy_name=None, descr=None,
-					 dynamic_con_policy=None, ext_ip_pool_name=None, 
+					 dynamic_con_policy_name=None, ext_ip_pool_name=None, 
 					 ext_ip_state="none", host_fw_policy_name=None, 
-					 ident_pool_name=None, local_disk_policy_name=None, 
-					 maint_policy_name=None, mgmt_access_policy=None, 
-					 mgmt_fw_policy_name=None, policy_owner="local", 
-					 power_policy_name="default", power_sync_policy_name=None,
-					 resolve_remote=None, scrub_policy_name=None, 
-					 sol_policy_name=None, src_templ_name=None,
-					 stats_policy_name="default", 
+					 ident_pool_name=None, kvm_mgmt_policy_name=None,
+					 local_disk_policy_name=None, maint_policy_name=None,
+					 mgmt_access_policy_name=None, mgmt_fw_policy_name=None,
+					 policy_owner="local", power_policy_name="default", 
+					 power_sync_policy_name=None, resolve_remote=None,
+					 scrub_policy_name=None, sol_policy_name=None,
+					 src_templ_name=None, stats_policy_name="default", 
 					 type="initial-template", usr_lbl=None , uuid="derived", 
 					 vcon_profile_name=None, vmedia_policy_name=None, **kwargs):
 			   
@@ -30,14 +30,15 @@ def ls_server_create(handle, name, org_dn="org-root", agent_policy_name=None,
 		bios_profile_name (string): 
 		boot_policy_name (string):
 		descr (string):
-		dynamic_con_policy (string):
+		dynamic_con_policy_name(string):
 		ext_ip_pool_name (string):
 		ext_ip_state (string): valid values are "none" or "pooled", or "static"
 		host_fw_policy_name (string):
 		ident_pool_name (string):
+		kvm_mgmt_policy_name (string):
 		local_disk_policy_name (string):
 		maint_policy_name (string):
-		mgmt_access_policy (string):
+		mgmt_access_policy_name (string):
 		mgmt_fw_policy_name (string):
 		policy_owner (string): "local" or "pending-policy" or  "policy"
 		power_policy_name (string):
@@ -78,7 +79,7 @@ def ls_server_create(handle, name, org_dn="org-root", agent_policy_name=None,
 				  agent_policy_name=agent_policy_name,
 				  bios_profile_name=bios_profile_name, 
 				  boot_policy_name=boot_policy_name, descr=descr, 
-				  dynamic_con_policy=dynamic_con_policy,
+				  dynamic_con_policy_name=dynamic_con_policy_name,
 				  ext_ip_pool_name=ext_ip_pool_name,
 				  ext_ip_state=ext_ip_state, 
 				  host_fw_policy_name=host_fw_policy_name,
