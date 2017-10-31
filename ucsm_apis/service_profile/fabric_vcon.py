@@ -34,14 +34,14 @@ def fabric_vcon_create(handle, id, ls_server_dn, fabric='NONE',
 		
 	"""
 	
-	from ucsmsdk.mometa.fabric.FabricVcon import FabricVcon
+	from ucsmsdk.mometa.fabric.FabricVCon import FabricVCon
 	
 	obj = handle.query_dn(ls_server_dn)
 	if not obj:
 		raise UcsOperationError("fabric_vcon_create", "LsServer '%s' does not \
 								  exist" % ls_server_dn)
 								  
-	mo = FabricVcon(parent_mo_or_dn=obj, id=id, fabric=fabric, 
+	mo = FabricVCon(parent_mo_or_dn=obj, id=id, fabric=fabric, 
 					inst_type=inst_type, placement=placement, select=select, 
 					share=share, transport=transport)				   
 	mo.set_prop_multiple(**kwargs)
