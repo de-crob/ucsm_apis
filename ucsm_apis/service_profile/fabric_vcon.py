@@ -153,4 +153,4 @@ def fabric_vcon_delete(handle, id, ls_server_dn):
 	mo = fabric_vcon_get(handle=handle, id=id, ls_server_dn=ls_server_dn,
 						 caller="fabric_vcon_delete")
 	handle.remove_mo(mo)
-	handle.commit(mo)
+	handle.commit()
