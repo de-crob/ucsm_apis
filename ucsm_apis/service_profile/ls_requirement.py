@@ -61,7 +61,7 @@ def ls_requirement_get(handle, ls_server_dn, caller="ls_requirement_get"):
 	dn = ls_server_dn + "/pn-req"
 	mo = handle.query_dn(dn)
 	if mo is None:
-		raise UcsOperationError(caller, "LsRequirement '%s' does not exist" \ 
+		raise UcsOperationError(caller, "LsRequirement '%s' does not exist" \
 								% dn)
 	return mo
 	
