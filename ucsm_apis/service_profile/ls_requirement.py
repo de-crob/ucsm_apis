@@ -86,8 +86,7 @@ def ls_requirement_exists(handle, ls_server_dn, **kwargs):
 		
 	"""
 	try:
-		mo = ls_requirement_get(handle=handle, name=name, 
-								ls_server_dn=ls_server_dn, 
+		mo = ls_requirement_get(handle=handle, ls_server_dn=ls_server_dn, 
 								caller="ls_requirement_exists")
 	except UcsOperationError:
 		return (False, None)
